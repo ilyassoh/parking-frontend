@@ -1,328 +1,234 @@
-
 /* NAVBAR STYLING */
-
-*{
+* {
   margin: 0;
-  }
-  
-  .link-button {
-  background-color: blue;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  }
-  
-  nav {
-  background-color: #333;
-  padding: 10px 0;
+}
+nav {
+  background-color: #152230;
   padding: 20px;
   font-size: 20px;
   font-weight: 600;
-  }
-  
-  ul {
+}
+ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   text-align: center;
-  }
-  
-  li {
+}
+li {
   display: inline-block;
   margin: 0 10px;
-  }
-  
-  a {
-  color: #fff;
+}
+nav ul li a {
+  color: #7e9bcf; /* Couleur du texte */
+  text-decoration: none; /* Supprimer la décoration du lien */
+  outline: none; /* Supprimer l'effet de soulignement bleu lorsqu'il est cliqué */
+}
+nav ul li a:hover {
+  text-decoration: underline; /* Ajouter une soulignement au survol */
+}
+
+a {
+  color: #242d2f; /* Couleur des liens */
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  }
-  
-  a:hover {
-  background-color: #555;
-  }
-  
-  @media only screen and (max-width: 600px) {
+}
+a:hover {
+  background-color: #6c757d; /* Couleur de fond au survol */
+}
+@media only screen and (max-width: 600px) {
   nav {
-  padding: 5px 0;
+    padding: 10px 0;
   }
-  
   li {
-  display: block;
-  margin: 10px 0;
+    display: block;
+    margin: 10px 0;
   }
-  }
-  
-  
-  
-  /* LOGIN STYLLING */
-  /* index.css */
-  .auth-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  }
-  
-  h2 {
-  margin-top: 0;
-  }
-  
-  .form-group {
-  margin-bottom: 15px;
-  }
-  
-  label {
-  display: block;
-  font-weight: bold;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
+}
+input[type="email"],
+input[type="password"] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  }
-  
-  button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-  background-color: #0056b3;
-  }
-  
-  @media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
   .auth-container {
-  padding: 10px;
+    padding: 10px;
   }
-  
   input[type="email"],
   input[type="password"],
   button {
-  padding: 8px;
+    padding: 8px;
   }
-  }
-  
-  /* REGISTRATION STYLLING */
-  /* + */
-  /* update user */
-  
-  .auth-container {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  }
-  
-  .auth-container h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-  }
-  
-  .form-group {
-  margin-bottom: 15px;
-  }
-  
-  .form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-  }
-  
-  .form-group input[type="text"],
-  .form-group input[type="email"],
-  .form-group input[type="password"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px;
-  }
-  
-  button[type="submit"] {
+}
+.link-button {
+  background-color: #2d3748;
+  color: #edf2f7;
   padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-  background-color: #0056b3;
-  }
-  
-  
-  
-  /* FOOTER STYKLING */
-  .footer{
-  background-color: black;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  }
-  
-  
-  
-  
-  
-  
-  /* PAGE NOT FOUND STYLING */
-  /* index.css */
-  .not-found-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
-  text-align: center;
-  }
-  
-  h2 {
-  color: #d9534f;
-  }
-  
-  p {
-  color: #333;
-  }
-  
-  @media only screen and (max-width: 600px) {
-  .not-found-container {
-  padding: 10px;
-  }
-  }
-  
-  /* ERROR STYLING */
-  .error-message {
-  color: red;
-  text-align: center;
-  }
-  
-  
-  
-  /*USER MANAGEMENT PAGE*/
-  .user-management-container {
-  max-width: 800px;
-  margin: 0px auto 60px auto;
+  text-decoration: none;
+}
+.link-button:hover {
+  background-color: #4a5568;
+  color: #edf2f7;
+}
+/* Auth Container */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
   padding: 20px;
-  
-  }
-  
-  h2 {
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+.form-group label {
+  font-weight: bold;
+  color: #2d3748;
+}
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #cbd5e0;
+}
+.btn-primary {
+  background-color: #2d3748;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #4a5568;
+}
+/* Registration Container */
+.add-client-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.add-client-container h2 {
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-  }
-  
-  table {
+  color: #2d3748;
+}
+.reg-button,
+.color-button {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 5px; /* Augmenter légèrement la hauteur du bouton */
+  background-color: #4a5568; /* Changer vers une couleur plus claire */
+  color: #edf2f7;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.reg-button:hover,
+.color-button:hover {
+  background-color: #66717a; /* Couleur plus foncée au survol */
+}
+/* Style de l'icône */
+.color-button::after {
+  content: '+';
+  margin-left: 5px;
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+/* Style interactif de l'icône au survol */
+.color-button:hover::after {
+  transform: scale(1.1);
+}
+/* Table */
+table {
   width: 100%;
   border-collapse: collapse;
-  }
-  
-  th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-  }
-  
-  th {
-  background-color: #f2f2f2;
-  }
-  
-  tr:nth-child(even) {
-  background-color: #f9f9f9;
-  }
-  
-  tr:hover {
-  background-color: #f2f2f2;
-  }
-  
-  button {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  }
-  
-  .reg-button {
-  padding: 15px;
-  margin: 10px auto;
-  }
-  
-  button:hover {
-  background-color: #0056b3;
-  }
-  
-  .delete-button {
-  background-color: rgb(255, 9, 9);
-  color: white;
-  margin-bottom: 10px;
-  font-weight: 400;
-  }
-  
-  
-  /**PROFILE STYLING"
-  /* index.css */
-  
-  .profile-page-container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  }
-  
-  .profile-page-container h2 {
   margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-  }
-  
-  .profile-page-container p {
-  margin-bottom: 10px;
-  font-size: 16px;
-  }
-  
-  .profile-page-container button {
-  padding: 10px 20px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 3px;
-  background-color: #007bff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #2d3748;
+  color: #edf2f7;
+  padding: 10px;
+  text-align: left;
+}
+h2 {
+  text-align: center; /* Centrer le texte */
+  color: #2d3748; /* Couleur du texte */
+  font-size: 2em; /* Taille de la police */
+  margin-top: 2px; /* Espacement au-dessus */
+  margin-bottom: 20px; /* Espacement en-dessous */
+  padding: 10px; /* Espacement interne */
+  border-bottom: 2px solid #4a5568; /* Ligne en dessous du texte */
+  font-family: 'Arial', sans-serif; /* Police de caractères */
+  background-color: #edf2f7; /* Couleur de fond */
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e2e8f0;
+}
+
+.delete-button {
+  background-color: #e53e3e;
   color: #fff;
-  font-size: 16px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
   cursor: pointer;
-  }
-  
-  .profile-page-container button:hover {
-  background-color: #093c72;
-  }
-  
-    
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c53030;
+}
+
+
+.white-link {
+  background-color: rgb(106, 181, 106); /* Fond vert */
+  color: white; /* Texte blanc */
+  padding: 5px 10px; /* Espacement interne */
+  border-radius: 5px; /* Bord arrondi */
+  text-decoration: none; /* Supprimer la décoration du lien par défaut */
+  transition: background-color 0.3s ease;
+  outline: none; 
+}
+.white-link:hover {
+  background-color: rgb(97, 140, 138); /* Fond vert foncé au survol */
+}
+.white-link:active {
+  background-color: rgb(106, 181, 106); /* Fond vert lorsqu'il est activé (clic) */
+}
+
+
+/* Footer */
+.footer {
+  background-color: #4a5568; /* Couleur de fond du footer */
+  color: #f7fafc; /* Couleur du texte */
+  padding: 20px; /* Padding pour l'espace interne */
+  text-align: center; /* Centrer le texte horizontalement */
+  display: flex; /* Utiliser Flexbox pour le centrage */
+  justify-content: center; /* Centrer horizontalement avec Flexbox */
+  align-items: center; /* Centrer verticalement avec Flexbox */
+  position: fixed; /* Rendre le footer fixe en bas de la page */
+  bottom: 0; /* Aligner au bas de la page */
+  width: 100%; /* S'étendre sur toute la largeur de la page */
+}
+
+
+
+
