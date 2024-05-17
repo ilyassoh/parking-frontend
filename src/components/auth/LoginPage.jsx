@@ -18,10 +18,15 @@ const handleSubmit = async (e) => {
         if (userData.token) {
             localStorage.setItem('token', userData.token)
             localStorage.setItem('role', userData.role)
-            navigate('/profile')
+            if(userData.role === "ADMIN"){
+                navigate('/profile')
+            }else if(userData.role === "USER"){
+                navigate('/userprofile')
+            }
         }else{
             setError(userData.message)
         }
+
         
     } catch (error) {
         console.log(error)

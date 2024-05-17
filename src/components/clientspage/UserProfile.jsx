@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import UserService from '../service/UserService';
-import { Link } from 'react-router-dom';
 
 
 
-function ProfilePage() {
+function UserProfilePage() {
     const [profileInfo, setProfileInfo] = useState({});
 
     useEffect(() => {
-        fetchProfileInfo();
+        fetchUserProfileInfo();
     }, []);
 
-    const fetchProfileInfo = async () => {
+    const fetchUserProfileInfo = async () => {
         try {
 
             const token = localStorage.getItem('token'); // Retrieve the token from localStorage
@@ -23,16 +22,13 @@ function ProfilePage() {
     };
 
     return (
-        <div className="profile-page-container">
+        <div className="userprofile-page-container">
             <h2>Profile Information</h2>
             <p>Name: {profileInfo.name}</p>
             <p>Email: {profileInfo.email}</p>
             <p>Role: {profileInfo.role}</p>
-            {profileInfo.role === "ADMIN" && (
-                <button><Link to={`/update-user/${profileInfo.id}`}>Update This Profile</Link></button>
-            )}
         </div>
     );
 }
 
-export default ProfilePage;
+export default UserProfilePage;

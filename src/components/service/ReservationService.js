@@ -13,7 +13,6 @@ class ReservationService {
             throw error;
         }
     }
-
     static async getAllReservations(search, token) {
         try {
             const response = await axios.get(`${ReservationService.BASE_URL}?search=${search}`, {
@@ -24,7 +23,6 @@ class ReservationService {
             throw error;
         }
     }
-
     static async findAllPage(page, size, search, token) {
         try {
             const response = await axios.get(`${ReservationService.BASE_URL}/page?page=${page}&size=${size}&search=${search}`, {
@@ -35,7 +33,6 @@ class ReservationService {
             throw error;
         }
     }
-
     static async getReservationsByClientId(clientId, token) {
         try {
             const response = await axios.get(`${ReservationService.BASE_URL}/client/${clientId}`, {
@@ -46,7 +43,16 @@ class ReservationService {
             throw error;
         }
     }
-
+    static async getReservationById(id, token) {
+        try {
+            const response = await axios.get(`${ReservationService.BASE_URL}/${id}`, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    }
     static async createReservation(reservationData, token) {
         try {
             const response = await axios.post(ReservationService.BASE_URL, reservationData, {

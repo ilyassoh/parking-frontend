@@ -12,7 +12,6 @@ function Navbar() {
             UserService.logout();
         }
     };
-
     return (
         <nav>
             <ul>
@@ -28,5 +27,4 @@ function Navbar() {
         </nav>
     );
 }
-
 export default Navbar;

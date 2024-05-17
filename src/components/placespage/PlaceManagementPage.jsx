@@ -8,21 +8,19 @@ function PlaceManagementPage() {
   useEffect(() => {
     fetchPlaces();
   }, []);
-
   const fetchPlaces = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await PlaceService.findAll('', token);
+      const response = await PlaceService.findAll(token);
       if (Array.isArray(response)) {
         setPlaces(response);
       } else {
         console.error('Invalid response format:', response);
       }
     } catch (error) {
-      console.error('Error fetching places:', error);
+      console.error('Error fetching parkings:', error);
     }
   };
-
   const deletePlace = async (placeId) => {
     try {
       const token = localStorage.getItem('token');

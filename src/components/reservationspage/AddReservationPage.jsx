@@ -14,17 +14,14 @@ function AddReservationPage() {
         parkingId: '',
         clientId: ''
     });
-
     const [places, setPlaces] = useState([]);
     const [parkings, setParkings] = useState([]);
     const [clients, setClients] = useState([]);
-
     useEffect(() => {
         fetchPlaces();
         fetchParkings();
         fetchClients();
     }, []);
-
     const fetchPlaces = async () => {
         try {
             const token = localStorage.getItem('token');
@@ -34,7 +31,6 @@ function AddReservationPage() {
             console.error('Error fetching places:', error);
         }
     };
-
     const fetchParkings = async () => {
         try {
             const token = localStorage.getItem('token');
@@ -44,7 +40,6 @@ function AddReservationPage() {
             console.error('Error fetching parkings:', error);
         }
     };
-
     const fetchClients = async () => {
         try {
             const token = localStorage.getItem('token');
@@ -54,12 +49,13 @@ function AddReservationPage() {
             console.error('Error fetching clients:', error);
         }
     };
-
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -72,13 +68,12 @@ function AddReservationPage() {
                 clientId: ''
             });
             alert('Reservation added successfully');
-            navigate('/reservations');
+            navigate('/admin/reservation-management');
         } catch (error) {
             console.error('Error adding reservation:', error);
             alert('An error occurred while adding the reservation');
         }
     };
-
     return (
         <div className="auth-container">
             <h2>Add Reservation</h2>
@@ -108,7 +103,7 @@ function AddReservationPage() {
                     </select>
                 </div>
                 <div className="form-group">
-                    <label>Parking:</label>
+                    <label>Parking:</label> 
                     <select 
                         name="parkingId" 
                         value={formData.parkingId} 

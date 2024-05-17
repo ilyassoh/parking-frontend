@@ -50,6 +50,7 @@ function UserManagementPage() {
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Role</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -59,6 +60,7 @@ function UserManagementPage() {
               <td>{user.id}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>
+              <td>{user.role}</td>
               <td>
                 <button className='delete-button' onClick={() => deleteUser(user.id)}>Delete</button>
                 <button><Link to={`/update-user/${user.id}`}>Update</Link></button>
